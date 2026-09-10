@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#071f44"><title>Sensores y actuadores con Arduino | Ian Martin Aguilar Alejo</title>
+<style>
+:root{--navy:#071f44;--blue:#0b4da2;--bright:#4e9bea;--red:#c94850;--ice:#eaf4ff;--paper:#f7faff;--ink:#193252;--muted:#647991;--line:#d7e5f2;--white:#fff;--shadow:0 18px 40px rgba(7,31,68,.12)}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.65}a{text-decoration:none;color:inherit}.container{width:min(1140px,88%);margin:auto}.topbar{height:74px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center}.topbar-inner{display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:11px;color:var(--navy);font-size:13px;font-weight:700;letter-spacing:.09em}.brand-mark{width:28px;height:28px;border:2px solid var(--blue);border-radius:7px;display:grid;place-items:center;color:var(--blue);font-size:12px}.brand b{color:var(--bright)}.nav{display:flex;gap:22px;color:var(--muted);font-size:13px}.nav a:hover{color:var(--blue)}.hero{background:linear-gradient(120deg,#071f44,#0b4da2 60%,#3185d1);color:#fff;padding:70px 0 78px}.eyebrow{color:#b9d9fa;font:11px monospace;letter-spacing:.11em;text-transform:uppercase;margin:0 0 19px}.hero h1{font-size:clamp(36px,5.7vw,68px);line-height:1.02;letter-spacing:-.06em;margin:0;max-width:920px}.hero h1 span{color:#a9d7ff}.hero-copy{max-width:820px;color:#d8eaff;font-size:17px;margin:25px 0 0}.hero-meta{display:flex;gap:28px;flex-wrap:wrap;border-top:1px solid #ffffff4d;margin-top:32px;padding-top:17px;color:#d8eaff;font:12px monospace}.hero-meta strong{display:block;color:#9fc9ef;font-size:10px;font-weight:400;text-transform:uppercase}.back{display:inline-block;color:var(--blue);font-size:13px;font-weight:700;margin:38px 0 24px}.layout{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(235px,.7fr);gap:50px;padding-bottom:80px}.content h2{color:var(--navy);font-size:28px;line-height:1.1;margin:38px 0 11px}.content h2:first-child{margin-top:0}.content h3{color:var(--blue);font-size:20px;margin:34px 0 8px}.content p,.content li{color:var(--muted);font-size:15px}.content ul,.content ol{padding-left:22px}.project-figure{margin:24px 0 34px;background:#fff;border:1px solid var(--line);border-radius:7px;overflow:hidden;box-shadow:0 10px 25px #071f4412}.project-figure img{display:block;width:100%;max-height:470px;object-fit:contain;background:#f2f6fa}.project-figure figcaption{padding:11px 14px;color:var(--muted);font-size:12px}.project-figure strong{color:var(--blue)}.code{background:#102944;border-radius:6px;overflow:auto;margin:20px 0 30px;color:#e7f2ff}.code-title{border-bottom:1px solid #34556e;padding:10px 16px;color:#a9d5fa;font:11px monospace;text-transform:uppercase}.code pre{padding:18px;margin:0;font:12px/1.65 Consolas,monospace;white-space:pre-wrap}.pin-table{width:100%;border-collapse:collapse;margin:18px 0;font-size:12px}.pin-table th{background:var(--blue);color:#fff;text-align:left;padding:10px}.pin-table td{border:1px solid var(--line);padding:9px;color:var(--muted);vertical-align:top}.pin-table td:first-child{background:var(--ice);color:var(--navy);font-weight:700}.note{background:#fff;border-left:4px solid var(--bright);box-shadow:var(--shadow);padding:18px 20px;margin-top:24px;color:var(--muted);font-size:14px}.note strong{color:var(--navy)}.side-card{background:#fff;border:1px solid var(--line);border-top:4px solid var(--blue);padding:23px;position:sticky;top:22px;box-shadow:0 8px 24px #071f440f}.side-card h3{color:var(--navy);font-size:16px;margin:0 0 16px}.side-card dt{color:var(--blue);font:10px monospace;text-transform:uppercase;margin-top:15px}.side-card dd{color:var(--muted);font-size:13px;margin:2px 0 0}.footer{padding:24px 0;color:#7b8da2;font:10px monospace;text-transform:uppercase;border-top:1px solid var(--line)}.footer-inner{display:flex;justify-content:space-between;gap:20px}.footer strong{color:var(--blue)}@media(max-width:780px){.topbar{height:auto;padding:17px 0}.nav{gap:10px;font-size:11px}.hero{padding:57px 0 63px}.hero h1{font-size:40px}.hero-copy{font-size:15px}.layout{grid-template-columns:1fr;gap:10px}.side-card{position:static}.footer-inner{display:block}.footer-inner span{display:block;margin-top:7px}}
+</style></head>
+<body>
+<header class="topbar"><div class="container topbar-inner"><a class="brand" href="index.html"><span class="brand-mark">IA</span><span>NODO <b>/</b> AUTOMATIZACIÓN</span></a><nav class="nav"><a href="index.html#catalogo">Catálogo</a><a href="arduino.html">Arduino</a><a href="incendios.html">Incendios</a></nav></div></header>
+<main><section class="hero"><div class="container"><p class="eyebrow">06 / Prácticas con Arduino</p><h1>Sensores, pantalla LCD y <span>actuadores</span></h1><p class="hero-copy">Tres prácticas de automatización documentadas: medición de temperatura con pantalla LCD y LED RGB, detección de humo con alarma y control de una bomba de agua mediante botón.</p><div class="hero-meta"><div><strong>Plataforma</strong>Arduino UNO</div><div><strong>Recursos</strong>3 montajes y 3 códigos</div><div><strong>Origen</strong>Documento escolar</div></div></div></section>
+<section class="container"><a class="back" href="index.html#catalogo">← Volver al catálogo</a><div class="layout"><article class="content">
+<h2>1. Sensor de temperatura con pantalla LCD</h2><p>Este montaje utiliza un sensor analógico conectado al pin A0, una pantalla LCD de 16×2 y un LED RGB. El programa convierte la lectura analógica en temperatura, la muestra en el puerto serial y la escribe en la pantalla LCD.</p><figure class="project-figure"><img src="imagenes/sensor-temperatura-lcd.png" alt="Arduino UNO conectado a un sensor de temperatura, pantalla LCD y LED RGB"><figcaption><strong>Montaje 1.</strong> Sensor de temperatura con pantalla LCD y LED RGB.</figcaption></figure><h3>¿Qué hace el código?</h3><ol><li>Incluye la biblioteca <code>LiquidCrystal</code> para controlar la pantalla.</li><li>Configura los pines de la LCD: RS en 12, Enable en 13 y datos en 5, 4, 3 y 2.</li><li>Lee el sensor de temperatura en A0.</li><li>Convierte la lectura analógica mediante la fórmula incluida en el documento.</li><li>Envía la temperatura al Monitor Serial y muestra el valor en la LCD.</li><li>Cambia el color del LED RGB según la temperatura: azul por debajo de 30 °C, verde entre 30 y 35 °C y rojo por encima de 35 °C.</li></ol><table class="pin-table"><thead><tr><th>Elemento</th><th>Conexión o función</th></tr></thead><tbody><tr><td>Pantalla LCD</td><td>RS 12, Enable 13, D4 5, D5 4, D6 3, D7 2.</td></tr><tr><td>Sensor</td><td>Entrada analógica A0.</td></tr><tr><td>LED RGB</td><td>Rojo 9, verde 10, azul 11.</td></tr><tr><td>Contraste LCD</td><td>Pin 6 mediante PWM, valor de contraste 1.</td></tr></tbody></table><div class="code"><div class="code-title">Código explicado · temperatura y LCD</div><pre>// Librería y conexión de la pantalla LCD
+#include &lt;LiquidCrystal.h&gt;
+LiquidCrystal lcd(12, 13, 5, 4, 3, 2);
+
+int contrastPin = 6;
+int contrastValue = 1;
+int sensorPin = A0;
+int redLed = 9;
+int greenLed = 10;
+int blueLed = 11;
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(contrastPin, OUTPUT);
+  lcd.begin(16, 2);
+  lcd.print("Temperatura: ");
+  pinMode(redLed, OUTPUT);
+  pinMode(greenLed, OUTPUT);
+  pinMode(blueLed, OUTPUT);
+}
+
+void loop() {
+  int lectura = analogRead(sensorPin);
+  float sensorTemp = ((5.0 / 1024) * lectura * 100) - 50;
+  int temp = (int)sensorTemp;
+  Serial.println(temp);
+
+  if (temp &gt; 35) {
+    digitalWrite(redLed, HIGH);
+    digitalWrite(greenLed, LOW);
+    digitalWrite(blueLed, LOW);
+  } else if (temp &gt;= 30 &amp;&amp; temp &lt;= 35) {
+    digitalWrite(greenLed, HIGH);
+    digitalWrite(redLed, LOW);
+    digitalWrite(blueLed, LOW);
+  } else {
+    digitalWrite(blueLed, HIGH);
+    digitalWrite(redLed, LOW);
+    digitalWrite(greenLed, LOW);
+  }
+
+  analogWrite(contrastPin, contrastValue);
+  lcd.setCursor(6, 1);
+  lcd.print(temp);
+  lcd.print("C");
+  delay(500);
+}</pre></div>
+<h2>2. Sensor de humo</h2><p>El segundo montaje usa un sensor de gas/humo en A5, tres LEDs para indicar el nivel de riesgo y un buzzer para emitir una alarma cuando el valor supera los límites definidos.</p><figure class="project-figure"><img src="imagenes/sensor-humo.png" alt="Arduino conectado a sensor de humo, buzzer y LEDs indicadores"><figcaption><strong>Montaje 2.</strong> Sensor de humo con indicadores visuales y alarma sonora.</figcaption></figure><h3>¿Qué hace el código?</h3><ul><li>Lee el valor del sensor mediante <code>analogRead(A5)</code>.</li><li>Por debajo de 930 muestra una condición fuera de peligro con LED verde.</li><li>Entre 930 y 960 enciende el LED amarillo y avisa que el peligro se acerca.</li><li>Por encima de 960 enciende el LED rojo y activa el buzzer.</li><li>Envía mensajes de estado al Monitor Serial cada 500 milisegundos.</li></ul><div class="code"><div class="code-title">Código explicado · sensor de humo</div><pre>int humo;
+int rojo = 11;
+int amarillo = 12;
+int verde = 13;
+int alarma = 10;
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(rojo, OUTPUT);
+  pinMode(amarillo, OUTPUT);
+  pinMode(verde, OUTPUT);
+  pinMode(alarma, OUTPUT);
+}
+
+void loop() {
+  humo = analogRead(A5);
+
+  if (humo &lt; 930) {
+    digitalWrite(verde, HIGH);
+    digitalWrite(amarillo, LOW);
+    digitalWrite(rojo, LOW);
+    noTone(alarma);
+    Serial.println("ESTAS FUERA DE PELIGRO");
+  }
+
+  if (humo &gt;= 930 &amp;&amp; humo &lt;= 960) {
+    digitalWrite(verde, LOW);
+    digitalWrite(amarillo, HIGH);
+    digitalWrite(rojo, LOW);
+    noTone(alarma);
+    Serial.println("OJO! EL PELIGRO SE ACERCA");
+  }
+
+  if (humo &gt; 960) {
+    digitalWrite(verde, LOW);
+    digitalWrite(amarillo, LOW);
+    digitalWrite(rojo, HIGH);
+    tone(alarma, 440);
+    Serial.println("ESTAS EN PELIGRO");
+  }
+  delay(500);
+}</pre></div>
+<h2>3. Motor de agua</h2><p>El tercer montaje controla una bomba de 3 V mediante un botón conectado al pin 2. Cada pulsación cambia el estado de la bomba. Un LED verde indica que está encendida y uno rojo indica que está apagada.</p><figure class="project-figure"><img src="imagenes/motor-agua.png" alt="Arduino conectado a motor de agua, batería, botón y LEDs"><figcaption><strong>Montaje 3.</strong> Control de motor de agua con botón e indicadores.</figcaption></figure><h3>¿Qué hace el código?</h3><ul><li>Define el pin 5 para la bomba, el pin 2 para el botón y los pines 8 y 9 para los LEDs.</li><li>Usa <code>INPUT_PULLUP</code> para el botón.</li><li>Configura una interrupción que detecta la pulsación del botón.</li><li>Cambia la variable <code>pumpRunning</code> entre encendido y apagado.</li><li>Activa el LED verde junto con la bomba y el LED rojo cuando la bomba está detenida.</li></ul><div class="code"><div class="code-title">Código explicado · motor de agua</div><pre>#define PUMP_PIN 5
+#define BUTTON_PIN 2
+#define GREEN_LED_PIN 8
+#define RED_LED_PIN 9
+
+volatile bool pumpRunning = false;
+bool greenLedState = LOW;
+bool redLedState = LOW;
+
+void setup() {
+  pinMode(PUMP_PIN, OUTPUT);
+  pinMode(BUTTON_PIN, INPUT_PULLUP);
+  pinMode(GREEN_LED_PIN, OUTPUT);
+  pinMode(RED_LED_PIN, OUTPUT);
+  attachInterrupt(digitalPinToInterrupt(BUTTON_PIN), buttonPressed, FALLING);
+  digitalWrite(PUMP_PIN, LOW);
+  digitalWrite(GREEN_LED_PIN, LOW);
+  digitalWrite(RED_LED_PIN, LOW);
+}
+
+void loop() {
+  if (pumpRunning) {
+    greenLedState = HIGH;
+    redLedState = LOW;
+    digitalWrite(PUMP_PIN, HIGH);
+  } else {
+    greenLedState = LOW;
+    redLedState = HIGH;
+    digitalWrite(PUMP_PIN, LOW);
+  }
+  digitalWrite(GREEN_LED_PIN, greenLedState);
+  digitalWrite(RED_LED_PIN, redLedState);
+}
+
+void buttonPressed() {
+  pumpRunning = !pumpRunning;
+}</pre></div>
+<div class="note"><strong>Nota de seguridad:</strong> la bomba debe utilizar una alimentación compatible y una etapa de potencia adecuada. No se debe alimentar un motor directamente desde un pin de Arduino si supera la corriente permitida.</div>
+<h2>Relación con el proyecto contra incendios</h2><p>Las tres prácticas sirven como base para el proyecto de detección y control de incendios: el sensor de temperatura aporta medición, el sensor de humo aporta detección de riesgo y el motor de agua representa el actuador que puede activar un rociador mediante una interfaz de potencia.</p>
+</article><aside><div class="side-card"><h3>Ficha de la práctica</h3><dl><dt>Documento</dt><dd>Sensor de temperatura con pantalla LCD.</dd><dt>Montajes</dt><dd>Temperatura, humo y motor de agua.</dd><dt>Placa</dt><dd>Arduino UNO.</dd><dt>Imágenes</dt><dd>3 diagramas de conexión.</dd><dt>Anterior</dt><dd><a href="incendios.html" style="color:var(--blue);font-weight:700">← Incendios</a></dd><dt>Índice</dt><dd><a href="index.html#catalogo" style="color:var(--blue);font-weight:700">Volver al catálogo →</a></dd></dl></div></aside></div></section></main>
+<footer class="footer"><div class="container footer-inner"><span><strong>Ian Martin Aguilar Alejo</strong> · 5.- “A” Inteligencia Artificial</span><span>Docente: Jordy Chirino Balcazar</span></div></footer></body></html>
